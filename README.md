@@ -1,6 +1,7 @@
 # ms-course
-Curso de Microsserviços Java com Spring Boot e Spring Cloud - do UDEMY
 
+
+Curso Microsserviços Java com Spring Boot e Spring Cloud
 
 1.1 Criar projeto hr-worker
 1.2 Implementar projeto hr-worker
