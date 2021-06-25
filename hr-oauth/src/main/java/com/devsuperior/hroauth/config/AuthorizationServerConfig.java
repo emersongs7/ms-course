@@ -33,7 +33,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
 		security.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
-		super.configure(security);
 	}
 
 	@Override
@@ -44,7 +43,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		.scopes("read", "write")
 		.authorizedGrantTypes("password")
 		.accessTokenValiditySeconds(86400);
-		super.configure(clients);
 	}
 
 	@Override
@@ -52,7 +50,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		endpoints.authenticationManager(authenticationManager)
 		.tokenStore(tokenStore)
 		.accessTokenConverter(accessTokenConverter);
-		super.configure(endpoints);
 	}
 	
 	
